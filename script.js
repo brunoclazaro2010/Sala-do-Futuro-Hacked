@@ -1,34 +1,45 @@
-// BRUNO HACKED v1.2 - SALA DO FUTURO
+// BRUNO HACKED - Menu Preto Simples
 (function() {
     'use strict';
 
-    if (document.getElementById("bruno-menu")) {
-        alert("🔥 Bruno Hacked já está aberto!");
+    // Não cria o menu novamente se já existir
+    if (document.getElementById('bruno-menu-preto')) {
+        alert('✅ Menu já está na tela!');
         return;
     }
 
-    const menu = document.createElement("div");
-    menu.id = "bruno-menu";
-    menu.style = `
-        position:fixed;top:12px;right:12px;width:270px;background:#0a0a0a;
-        border:3px solid #ff0000;border-radius:14px;box-shadow:0 0 25px #ff0000;
-        z-index:99999999;font-family:Arial;color:white;overflow:hidden;
+    const menu = document.createElement('div');
+    menu.id = 'bruno-menu-preto';
+    menu.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 280px;
+        background-color: #0a0a0a;
+        border: 2px solid #ff0000;
+        border-radius: 16px;
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+        z-index: 9999999;
+        font-family: Arial, sans-serif;
+        color: white;
+        overflow: hidden;
     `;
+
     menu.innerHTML = `
-        <div style="background:#1f0000;padding:12px;font-size:15px;font-weight:bold;text-align:center;border-bottom:2px solid #ff0000;">
-            🔥 BRUNO HACKED v1.2
+        <div style="background: #1f0000; padding: 15px; text-align: center; font-size: 16px; font-weight: bold; border-bottom: 2px solid #ff0000;">
+            🔥 BRUNO HACKED
         </div>
-        <div style="padding:12px;display:flex;flex-direction:column;gap:8px;">
-            <button onclick="alert('👁️ Revelar Respostas - Em breve')" style="padding:12px;background:#1f1f1f;border:none;color:white;border-radius:8px;cursor:pointer;">👁️ Revelar Respostas</button>
-            <button onclick="alert('🔄 Auto Resolver ativado (em teste)')" style="padding:12px;background:#1f1f1f;border:none;color:white;border-radius:8px;cursor:pointer;">🔄 Auto Resolver</button>
-            <button onclick="alert('⚡ Função em desenvolvimento')" style="padding:12px;background:#1f1f1f;border:none;color:white;border-radius:8px;cursor:pointer;">⚡ Completar Todas</button>
-            <button onclick="this.parentElement.parentElement.remove();alert('Menu fechado. Clique no favorito novamente.')" style="padding:12px;background:#330000;border:none;color:#ff6666;border-radius:8px;cursor:pointer;">✕ Fechar Menu</button>
+        <div style="padding: 20px; text-align: center; font-size: 14px; line-height: 1.6;">
+            Menu preto carregado com sucesso!<br><br>
+            <span style="color: #888;">Este é apenas o menu básico.</span><br>
+            Agora podemos adicionar as funções.
         </div>
-        <div style="background:#111;padding:6px;text-align:center;font-size:10px;color:#555;">
+        <div style="background: #111; padding: 12px; text-align: center; font-size: 11px; color: #555;">
             by brunoclazaro2010
         </div>
     `;
 
     document.body.appendChild(menu);
-    console.log("%c✅ BRUNO HACKED v1.2 carregado com sucesso!", "color:red;font-size:16px;font-weight:bold");
+
+    console.log('%c✅ Menu preto injetado com sucesso!', 'color: red; font-size: 15px; font-weight: bold;');
 })();
