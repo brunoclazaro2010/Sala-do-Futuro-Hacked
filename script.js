@@ -1,5 +1,5 @@
 // =============================================
-// BLOODY HUB - Versão GitHub
+// BLOODY HUB - Versão GitHub (Atualizado)
 // =============================================
 
 const BloodyHub = {
@@ -28,25 +28,25 @@ const BloodyHub = {
                 <!-- Telas Individuais -->
                 <div id="screen-tarefa" class="screen hidden">
                     <div class="header">Tarefa SP</div>
-                    <div class="content">Em breve...</div>
+                    <div class="content">Em breve... Aqui vai vir o conteúdo da Tarefa SP.</div>
                     <div class="back-btn">← VOLTAR</div>
                 </div>
 
                 <div id="screen-speak" class="screen hidden">
                     <div class="header">Speak</div>
-                    <div class="content">Em breve...</div>
+                    <div class="content">Em breve... Aqui vai vir o conteúdo do Speak.</div>
                     <div class="back-btn">← VOLTAR</div>
                 </div>
 
                 <div id="screen-khan" class="screen hidden">
                     <div class="header">Khan Academy</div>
-                    <div class="content">Em breve...</div>
+                    <div class="content">Em breve... Aqui vai vir o conteúdo do Khan Academy.</div>
                     <div class="back-btn">← VOLTAR</div>
                 </div>
 
                 <div id="screen-redacao" class="screen hidden">
                     <div class="header">Redação Paulista</div>
-                    <div class="content">Em breve...</div>
+                    <div class="content">Em breve... Aqui vai vir o conteúdo da Redação Paulista.</div>
                     <div class="back-btn">← VOLTAR</div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ const BloodyHub = {
                 border-radius: 20px;
                 overflow: hidden;
                 z-index: 2147483647;
-                box-shadow: 0 0 30px rgba(255,0,0,0.5);
+                box-shadow: 0 0 30px rgba(255,0,0,0.6);
                 animation: menuPop 0.6s forwards, ledPulse 1.4s infinite ease-in-out 0.7s;
             }
 
@@ -94,12 +94,7 @@ const BloodyHub = {
                 border-bottom: 2px solid #880000;
             }
 
-            .buttons {
-                padding: 25px 18px;
-                display: flex;
-                flex-direction: column;
-                gap: 14px;
-            }
+            .buttons { padding: 25px 18px; display: flex; flex-direction: column; gap: 14px; }
 
             .btn, .back-btn {
                 background: #222222;
@@ -166,32 +161,32 @@ const BloodyHub = {
     },
 
     addListeners() {
-        const mainScreen = document.getElementById('main-screen');
+        const main = document.getElementById('main-screen');
         const screens = document.querySelectorAll('.screen');
         const buttons = document.querySelectorAll('.btn');
-        const backButtons = document.querySelectorAll('.back-btn');
+        const backBtns = document.querySelectorAll('.back-btn');
 
         buttons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const target = btn.getAttribute('data-screen');
-                mainScreen.style.display = 'none';
+                main.style.display = 'none';
                 document.getElementById('screen-' + target).style.display = 'block';
             });
         });
 
-        backButtons.forEach(back => {
-            back.addEventListener('click', () => {
+        backBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
                 screens.forEach(s => s.style.display = 'none');
-                mainScreen.style.display = 'block';
+                main.style.display = 'block';
             });
         });
     },
 
     toggle() {
         const menu = document.getElementById('hc-menu');
-        if (menu) menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+        if (menu) menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
     }
 };
 
-// Iniciar automaticamente
+// Auto iniciar
 BloodyHub.create();
