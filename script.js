@@ -6,8 +6,8 @@
   menu.style.position = "fixed";
   menu.style.top = "20px";
   menu.style.right = "20px";
-  menu.style.width = "600px";
-  menu.style.height = "700px";
+  menu.style.width = "850px";
+  menu.style.height = "900px";
   menu.style.background = "linear-gradient(to bottom, #ff0000, #000000)";
   menu.style.borderRadius = "15px";
   menu.style.zIndex = "999999";
