@@ -1,8 +1,8 @@
 (function(){
-  if(document.getElementById("custom-black-menu")) return;
+  if(document.getElementById("redblack-menu-v2")) return;
   
   var menu = document.createElement("div");
-  menu.id = "custom-black-menu";
+  menu.id = "redblack-menu-v2";
   menu.style.position = "fixed";
   menu.style.top = "20px";
   menu.style.right = "20px";
@@ -13,6 +13,10 @@
   menu.style.zIndex = "999999";
   menu.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
   menu.style.border = "1px solid #333";
+  
+  // Remove o menu antigo se existir
+  var oldMenu = document.getElementById("custom-black-menu");
+  if(oldMenu) oldMenu.remove();
   
   document.body.appendChild(menu);
 })();
