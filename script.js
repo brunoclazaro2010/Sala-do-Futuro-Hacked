@@ -1,8 +1,12 @@
 (function(){
-  if(document.getElementById("custom-black-menu")) return;
+  var menuId = "custom-black-menu-v3";
+  if(document.getElementById(menuId)) return;
+  
+  var oldMenu = document.getElementById("custom-black-menu");
+  if(oldMenu) oldMenu.remove();
   
   var menu = document.createElement("div");
-  menu.id = "custom-black-menu";
+  menu.id = menuId;
   menu.style.position = "fixed";
   menu.style.top = "20px";
   menu.style.right = "20px";
