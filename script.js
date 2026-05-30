@@ -10,10 +10,11 @@ javascript:(function(){
         menu.style.top = '10px';
         menu.style.right = '10px';
         menu.style.width = '300px';
-        menu.style.height = '500px';
+        menu.style.height = '350px';
         menu.style.backgroundColor = 'black';
         menu.style.borderRadius = '15px';
         menu.style.zIndex = '999999';
+        menu.style.border = '2px solid #333';
         document.body.appendChild(menu);
     }
 })();
