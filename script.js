@@ -1,22 +1,20 @@
 (function(){
-  var menuId = "custom-black-menu-v3";
-  if(document.getElementById(menuId)) return;
-  
-  var oldMenu = document.getElementById("custom-black-menu");
-  if(oldMenu) oldMenu.remove();
-  
-  var menu = document.createElement("div");
-  menu.id = menuId;
-  menu.style.position = "fixed";
-  menu.style.top = "20px";
-  menu.style.right = "20px";
-  menu.style.width = "850px";
-  menu.style.height = "900px";
-  menu.style.background = "linear-gradient(to bottom, #ff0000, #000000)";
-  menu.style.borderRadius = "15px";
-  menu.style.zIndex = "999999";
-  menu.style.boxShadow = "0 4px 15px rgba(0,0,0,0.3)";
-  menu.style.border = "1px solid #333";
-  
-  document.body.appendChild(menu);
+    var id = 'meu-menu-personalizado';
+    var menu = document.getElementById(id);
+    
+    if (menu) {
+        menu.remove();
+    } else {
+        menu = document.createElement('div');
+        menu.id = id;
+        menu.style.position = 'fixed';
+        menu.style.top = '10px';
+        menu.style.right = '10px';
+        menu.style.width = '300px';
+        menu.style.height = '300px';
+        menu.style.backgroundColor = 'black';
+        menu.style.borderRadius = '15px';
+        menu.style.zIndex = '999999';
+        document.body.appendChild(menu);
+    }
 })();
