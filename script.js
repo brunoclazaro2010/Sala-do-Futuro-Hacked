@@ -10,7 +10,7 @@ javascript:(function(){
         menu.style.top = '10px';
         menu.style.right = '10px';
         menu.style.width = '300px';
-        menu.style.height = '400px';
+        menu.style.height = '500px';
         menu.style.backgroundColor = 'black';
         menu.style.borderRadius = '15px';
         menu.style.zIndex = '999999';
